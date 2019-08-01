@@ -1,4 +1,5 @@
 zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
   prefix: "/api"
   ignoredServices: '*'
   routes:
@@ -26,3 +27,7 @@ zuul:
       path: /mail-service/**
       service-id: mail-service
       strip-prefix: true
+    oauth-server:
+      path: /oauth/**
+      service-id: oauth-server
+      strip-prefix: false
